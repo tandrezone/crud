@@ -1,8 +1,8 @@
 <?php
 
-namespace Xbugs\Crud;
+namespace xbugs\crud;
 
-use App\Console\Commands\CreateCrud;
+use xbugs\crud\Commands\CreateCrud;
 use Illuminate\Support\ServiceProvider;
 
 class CrudServiceProvider extends ServiceProvider

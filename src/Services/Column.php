@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Services;
+namespace xbugs\crud\Services;
 
 
 class Column

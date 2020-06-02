@@ -1,9 +1,8 @@
 <?php
 
+namespace xbugs\crud\Http\Controllers;
 
-namespace Xbugs\Crud\Http\Controllers;
 
-use App\Models\Client;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;

@@ -3,7 +3,7 @@ $model = "<?php
 
 namespace App\Models;
 
-use App\Services\Column;
+use xbugs\crud\Services\Column;
 use Illuminate\Database\Eloquent\Model;
 
 class ".$class." extends Model
