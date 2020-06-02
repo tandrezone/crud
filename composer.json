@@ -1,6 +1,8 @@
 {
     "name": "xbugs/crud",
     "description": "Create crud in a simple way",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Tiago Andre",
