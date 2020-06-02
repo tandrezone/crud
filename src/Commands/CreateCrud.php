@@ -39,6 +39,7 @@ class CreateCrud extends Command
      */
     public function handle()
     {
+
         $class = $this->argument('name');
         $table = $class . "s";
         $elements = [];
@@ -71,7 +72,7 @@ class CreateCrud extends Command
             $this->items[] = $item;
             $name = $this->ask("Name? or exit to exit");
         } while ($name != "exit");
-        require_once(app_path() . "/../packages/xbugs/crud/src/stubs/migration.create.php");
+        require_once(__DIR__ . "/../stubs/migration.create.php");
         file_put_contents(app_path() . "/../database/migrations/".date('Y_m_d_His')."_create_".$class."s_table.php",$migration);
 
         //model
@@ -88,7 +89,7 @@ class CreateCrud extends Command
                 $createps[] = $item;
             }
         }
-        require_once(app_path() . "/../packages/xbugs/crud/src/stubs/model.php");
+        require_once(__DIR__ . "/../stubs/model.php");
         file_put_contents(app_path() . "/Models/".ucfirst($class).".php",$model);
         $class = strtolower($class);
         $model = ucfirst($class);
@@ -104,10 +105,10 @@ class CreateCrud extends Command
         $validationF = "[ '";
         $validationL = "']";
         $validation = $validationF.$val.$validationL;
-        require_once(app_path() . "/../packages/xbugs/crud/src/stubs/controller.plain.php");
+        require_once(__DIR__ . "/../stubs/controller.plain.php");
         file_put_contents(app_path() . "/Http/Controllers/".$class.".php",$controller);
         $route = "Route::resource('".$resource."', '".$class."');";
         file_put_contents(app_path() . "/../routes/web.php",$route,FILE_APPEND);
 
-  }
+    }
 }
