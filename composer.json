@@ -1,0 +1,11 @@
+{
+    "name": "xbugs/crud",
+    "description": "Create crud in a simple way",
+    "authors": [
+        {
+            "name": "Tiago Andre",
+            "email": "tiago.andre@decskill.com"
+        }
+    ],
+    "require": {}
+}
